@@ -15,9 +15,9 @@ public interface UserInfoMapper {
 
     @Insert({
         "insert into t_user_info (uid, nickname, ",
-        "password, icon_url, ","yn,)",
+        "password, icon_url, ","yn)",
         "values (#{uid,jdbcType=BIGINT}, #{nickname,jdbcType=VARCHAR}, ",
-        "#{password,jdbcType=VARCHAR}, #{iconUrl,jdbcType=VARCHAR}, ","0)"
+        "#{password,jdbcType=VARCHAR}, #{iconUrl,jdbcType=VARCHAR},","0)"
     })
     @SelectKey(statement="SELECT LAST_INSERT_ID()", keyProperty="id", before=false, resultType=Long.class)
     int insert(UserInfo record);

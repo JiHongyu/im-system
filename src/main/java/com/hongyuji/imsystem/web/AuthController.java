@@ -38,7 +38,7 @@ public class AuthController {
                     request.getUsername(),
                     CookieUtil.ONE_DAY
             );
-            return Response.toSuccess();
+            return Response.toSuccess(request.getUsername());
         }else{
             return Response.toFail("账号密码错误");
         }
