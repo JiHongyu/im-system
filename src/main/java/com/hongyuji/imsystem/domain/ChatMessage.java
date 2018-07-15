@@ -1,7 +1,7 @@
 package com.hongyuji.imsystem.domain;
 
 
-public class ChatMessage {
+public class ChatMessage  implements MessageInterface {
 
     private Long sender;
     private Long receiver;
@@ -29,5 +29,10 @@ public class ChatMessage {
 
     public void setContext(String context) {
         this.context = context;
+    }
+
+    @Override
+    public int getType() {
+        return 1;
     }
 }
