@@ -5,7 +5,13 @@ spring:
     url: jdbc:mysql://localhost:3306/im_system?useSSL=false&useUnicode=true&characterEncoding=utf8
     username: root
     password: ss0306
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
+    prefix: classpath:/templates
+    suffix: .html
+    encoding: UTF-8
 
 server:
-  port: 8085
+  port: 8080
 
